@@ -8,14 +8,22 @@ import { ThemeService } from 'app/services/theme/theme.service';
 })
 export class ThemeToggleComponent {
   darkModeEnabled = true;
+  themeToggleOptions = [
+    {
+      icon: "pi pi-moon",
+      value: true
+    },
+    {
+      icon: "pi pi-sun",
+      value: false
+    }
+  ];
 
   constructor(private themeService: ThemeService) {
     this.darkModeEnabled = this.themeService.darkModeEnabled();
   }
 
   toggleTheme(): void {
-    console.log(this.darkModeEnabled);
-    
     this.themeService.toggleTheme();
   }
 
