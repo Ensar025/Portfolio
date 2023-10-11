@@ -5,7 +5,7 @@ import {FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
 // PrimeNG modules
-import { SelectButtonModule } from 'primeng/selectbutton';
+import { ToggleButtonModule } from 'primeng/togglebutton';
 
 // Components
 import { AppComponent } from './app.component';
@@ -19,7 +19,7 @@ import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.com
     ThemeToggleComponent
   ],
   imports: [
-    SelectButtonModule,
+    ToggleButtonModule,
     BrowserModule,
     FormsModule,
     AppRoutingModule,

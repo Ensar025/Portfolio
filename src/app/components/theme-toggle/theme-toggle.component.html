@@ -1,7 +1,10 @@
 <div class="absolute top-0 right-0 p-4 font-bold z-5">
-    <p-selectButton [(ngModel)]="darkModeEnabled" [options]="themeToggleOptions" optionLabel="icon" optionValue="value" (onChange)="toggleTheme()">
-        <ng-template let-item pTemplate>
-            <i [class]="item.icon" class="mx-auto"></i>
-        </ng-template>
-    </p-selectButton>
+    <p-toggleButton
+        [(ngModel)]="darkModeEnabled" 
+        (onChange)="toggleTheme()"
+        onIcon="pi pi-sun"
+        onLabel="Switch to light mode" 
+        offIcon="pi pi-moon"
+        offLabel="Switch to dark mode">
+    </p-toggleButton>
 </div>
