@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  socials = [
+    {
+      name: "GitHub",
+      icon: "pi pi-github",
+      url: "https://github.com/Ensar025"
+    },
+    {
+      name: "LinkedIn",
+      icon: "pi pi-linkedin",
+      url: "https://www.linkedin.com/in/muhammed-ensar-ishakoglu/"
+    }
+  ]
 
 }

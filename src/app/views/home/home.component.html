@@ -1,1 +1,16 @@
-<p>home works!</p>
+<div class="grid justify-content-center flex-row text-center pt-8">
+    <div class="col-6 py-4 px-8">
+        <h1 class="text-6xl">Hey! 👋, <br> I'm Muhammed Ensar </h1>
+        <h4 class="text-xl">I'm a full-stack developer that loves solving complex problems, design architectures and
+            develop algorithms. I'm always enthusiastic about tackling fresh projects, and I'm eager to acquire new
+            knowledge. Collaborating
+            with others is a great way to learn and grow, and I'm always open to new ideas and feedback.</h4>
+    </div>
+    <div class="col-7">
+        <h2 class="col text-3xl">View my socials!</h2>
+        <a *ngFor="let social of socials" class="font-bold text-xl no-underline text-color mr-4" [href]="social.url" target="_blank">
+            <i [class]="social.icon" class="mr-2" style="font-size: x-large;"></i>
+            <span>{{social.name}}</span>
+        </a>
+    </div>
+</div>

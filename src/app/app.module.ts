@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 // PrimeNG modules
 import { ToggleButtonModule } from 'primeng/togglebutton';
+import { ButtonModule } from 'primeng/button';
 
 // Components
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.com
   ],
   imports: [
     ToggleButtonModule,
+    ButtonModule,
     BrowserModule,
     FormsModule,
     AppRoutingModule,
