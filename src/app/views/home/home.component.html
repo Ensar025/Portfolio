@@ -1,16 +1,21 @@
-<div class="grid justify-content-center flex-row text-center pt-8">
-    <div class="col-6 py-4 px-8">
-        <h1 class="text-6xl">Hey! 👋, <br> I'm Muhammed Ensar </h1>
-        <h4 class="text-xl">I'm a full-stack developer that loves solving complex problems, design architectures and
-            develop algorithms. I'm always enthusiastic about tackling fresh projects, and I'm eager to acquire new
-            knowledge. Collaborating
-            with others is a great way to learn and grow, and I'm always open to new ideas and feedback.</h4>
+<div class="flex align-items-center justify-content-center flex-column text-center h-screen overflow-hidden">
+    <h1 class="xl:w-7 lg:text-6xl md:text-5xl text-4xl">Hey! 👋, <br> I'm Muhammed Ensar </h1>
+    <h4 class="xl:w-5 sm:w-8 w-11 md:text-xl text-lg">
+        I'm a full-stack enthusiast who likes taking on complex challenges, right from brainstorming
+        to turning them into code. Feedback is my go-to for improvement, and I love working with others to come up
+        with unique and inventive solutions for various problems. I also like working on complex algorithms and have
+        a deep interest in AI. Feel free to explore my projects! 
+    </h4>
+    <div class="xl:w-6 lg:w-8 justify-content-center text-center py-4 px-8">
+
     </div>
-    <div class="col-7">
-        <h2 class="col text-3xl">View my socials!</h2>
-        <a *ngFor="let social of socials" class="font-bold text-xl no-underline text-color mr-4" [href]="social.url" target="_blank">
-            <i [class]="social.icon" class="mr-2" style="font-size: x-large;"></i>
-            <span>{{social.name}}</span>
+    <div class="flex w-full flex-row justify-content-center">
+        <a *ngFor="let social of socials" class="font-bold text-xl no-underline text-color mr-3" [href]="social.url"
+            target="_blank">
+            <i [class]="social.icon" style="font-size: 2.5rem;"></i>
         </a>
     </div>
+</div>
+<div class="overflow-hidden h-screen w-screen absolute top-0">
+    <app-floating-expertise-logos></app-floating-expertise-logos>
 </div>
