@@ -1,0 +1,26 @@
+img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: -100vh;
+    transform-style: preserve-3d;
+}
+
+$total: 10;
+@for $i from 1 through $total {
+	
+	img:nth-child(#{$i}){
+		left: random(120) * 1% - 20;
+		animation: raise#{$i} 6 + random(3) +s linear infinite;
+		animation-delay: random(5) - 5 + s;
+		transform: scale(random() * random(10)) rotate(random(360) + deg);
+		z-index: $i - 11;
+
+	  @keyframes raise#{$i} {
+		  to{
+			 bottom:100vh;
+			 transform: rotate(random(360) + deg);
+			}
+		}
+	}
+}

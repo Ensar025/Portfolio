@@ -12,12 +12,14 @@ import { ButtonModule } from 'primeng/button';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './views/home/home.component';
 import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.component';
+import { FloatingExpertiseLogosComponent } from './components/floating-expertise-logos/floating-expertise-logos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ThemeToggleComponent
+    ThemeToggleComponent,
+    FloatingExpertiseLogosComponent
   ],
   imports: [
     ToggleButtonModule,
