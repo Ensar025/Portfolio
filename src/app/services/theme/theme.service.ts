@@ -9,6 +9,10 @@ export class ThemeService {
   private readonly THEME_PREFIX = "src/themes/";
   private readonly DARK_THEME = this.THEME_PREFIX + "md-dark-indigo";
   private readonly LIGHT_THEME = this.THEME_PREFIX + "md-light-indigo";
+  private readonly LOGO_ID = "logo";
+  private readonly LOGO_PREFIX = "assets/"
+  private readonly LOGO_LIGHT = "logo-light.svg";
+  private readonly LOGO_DARK = "logo-dark.svg";
 
   private isDarkMode = true;
 
@@ -19,13 +23,24 @@ export class ThemeService {
   // Defaults to dark mode
   private initializePreferredColorScheme(): void {
     const lightModeEnabled = window.matchMedia("(prefers-color-scheme: light)").matches;
-    
 
     if (lightModeEnabled) {
       this.isDarkMode = false;
     }
 
+    // TODO: make two functions in 1
     this.updateTheme();
+  }
+
+  public editLogo(): void {
+    const logo = this.document.getElementById(this.LOGO_ID) as HTMLImageElement;
+
+    if (logo) {
+      let logoSrc = this.isDarkMode ? this.LOGO_DARK : this.LOGO_LIGHT;
+      logo.src = this.LOGO_PREFIX + logoSrc;
+    } else {
+      console.error(`Could not change logo as there is no element with id '${this.LOGO_ID}'.`);
+    }
   }
 
   private updateTheme(): void {
@@ -48,5 +63,6 @@ export class ThemeService {
   public toggleTheme(): void {
     this.isDarkMode = !this.isDarkMode;
     this.updateTheme();
+    this.editLogo();
   }
 }

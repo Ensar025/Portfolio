@@ -6,15 +6,15 @@ img {
     transform-style: preserve-3d;
 }
 
-$total: 10;
+$total: 14;
 @for $i from 1 through $total {
 	
 	img:nth-child(#{$i}){
 		left: random(120) * 1% - 20;
-		animation: raise#{$i} 6 + random(3) +s linear infinite;
+		animation: raise#{$i} 6 + random(3) + s linear infinite;
 		animation-delay: random(5) - 5 + s;
 		transform: scale(random() * random(10)) rotate(random(360) + deg);
-		z-index: $i - 11;
+		z-index: $i - ($total + 1);
 
 	  @keyframes raise#{$i} {
 		  to{
