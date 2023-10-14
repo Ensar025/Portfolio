@@ -1,0 +1,29 @@
+<p-menubar [model]="items" class="absolute top-0 w-full z-5 surface-ground">
+    <ng-template pTemplate="start">
+        <img id="logo" src="assets/logo-dark.svg" height="30" class="mr-2" />
+    </ng-template>
+    <ng-template pTemplate="end">
+        <div class="flex">
+            <div class="font-bold mr-3">
+                <p-toggleButton 
+                    [(ngModel)]="animationEnabled"
+                    (onChange)="toggleAnimation()"
+                    onIcon="pi pi-power-off" 
+                    onLabel="Turn off background animation"
+                    offIcon="pi pi-bolt" 
+                    offLabel="Turn on background animation">
+                </p-toggleButton>
+            </div>
+            <div class="font-bold">
+                <p-toggleButton 
+                    [(ngModel)]="darkModeEnabled"
+                    (onChange)="toggleTheme()"
+                    onIcon="pi pi-sun"
+                    onLabel="Switch to light mode" 
+                    offIcon="pi pi-moon" 
+                    offLabel="Switch to dark mode">
+                </p-toggleButton>
+            </div>
+        </div>
+    </ng-template>
+</p-menubar>
