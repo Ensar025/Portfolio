@@ -28,7 +28,6 @@ export class ThemeService {
       this.isDarkMode = false;
     }
 
-    // TODO: make two functions in 1
     this.updateTheme();
   }
 
