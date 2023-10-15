@@ -1,9 +1,9 @@
-<p-menubar [model]="items" class="absolute top-0 w-full z-5" styleClass="transparent-background">
+<p-menubar [model]="items" class="absolute w-full z-5" styleClass="transparent-background">
     <ng-template pTemplate="start">
         <img id="logo" src="assets/logo-dark.svg" height="30" class="mr-6" />
     </ng-template>
     <ng-template pTemplate="end">
-        <div class="flex">
+        <div class="hidden lg:relative lg:flex">
             <div class="font-bold mr-3">
                 <p-toggleButton 
                     [(ngModel)]="animationEnabled"
