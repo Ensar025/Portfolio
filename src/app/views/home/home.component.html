@@ -13,8 +13,8 @@
     <div class="xl:w-6 lg:w-8 justify-content-center text-center py-4 px-8">
 
     </div>
-    <div class="flex w-full flex-row justify-content-center">
-        <a *ngFor="let social of socials" class="font-bold text-xl no-underline text-color mr-3" [href]="social.url"
+    <div class="flex w-auto flex-row justify-content-center transparent-background p-2 inline-block">
+        <a *ngFor="let social of socials; index as i" class="font-bold text-xl no-underline text-color" [ngClass]="i === socials.length-1 ? '' : 'mr-3'" [href]="social.url"
             target="_blank">
             <i [class]="social.icon" style="font-size: 2.5rem;"></i>
         </a>
