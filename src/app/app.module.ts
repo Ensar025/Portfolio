@@ -14,13 +14,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './views/home/home.component';
 import { FloatingExpertiseLogosComponent } from './components/floating-expertise-logos/floating-expertise-logos.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { PortfolioComponent } from './views/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     FloatingExpertiseLogosComponent,
-    MenuComponent
+    MenuComponent,
+    PortfolioComponent
   ],
   imports: [
     ToggleButtonModule,

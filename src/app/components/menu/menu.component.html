@@ -1,9 +1,11 @@
 <p-menubar [model]="items" class="relative w-full z-5" styleClass="transparent-background">
     <ng-template pTemplate="start">
         <div class="flex">
-            <img id="logo" src="assets/logo-dark.svg" height="30" class="mr-6" />
+            <a [routerLink]="['/home']">
+                <img id="logo" src="assets/logo-dark.svg" height="30" class="mr-6" />
+            </a>
             <div class="lg:hidden flex">
-                <div class="font-bold mr-3">
+                <div *ngIf="currentRoute === '/' || currentRoute === '/home'" class="font-bold mr-3">
                     <p-toggleButton [(ngModel)]="animationEnabled" (onChange)="toggleAnimation()"
                         onIcon="pi pi-power-off" offIcon="pi pi-play">
                     </p-toggleButton>
@@ -19,7 +21,7 @@
     </ng-template>
     <ng-template pTemplate="end">
         <div class="hidden lg:relative lg:flex">
-            <div class="font-bold mr-3">
+            <div *ngIf="currentRoute === '/' || currentRoute === '/home'" class="font-bold mr-3">
                 <p-toggleButton [(ngModel)]="animationEnabled" (onChange)="toggleAnimation()" onIcon="pi pi-power-off"
                     onLabel="Turn off background animation" offIcon="pi pi-play"
                     offLabel="Turn on background animation">
