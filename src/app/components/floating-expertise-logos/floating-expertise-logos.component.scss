@@ -6,7 +6,7 @@ img {
     transform-style: preserve-3d;
 }
 
-$total: 12;
+$total: 22;
 @for $i from 1 through $total {
 	
 	img:nth-child(#{$i}){

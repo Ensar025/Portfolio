@@ -14,7 +14,7 @@ export class FloatingExpertiseLogosComponent {
     'React',
     'Vue',
     'Python',
-    'ASP.NET Core',
+    'ASP.NET',
     'Java',
     'Azure',
     'TypeScript',
