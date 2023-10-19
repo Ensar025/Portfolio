@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { logos } from './constants';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
@@ -16,9 +15,5 @@ export class FloatingLogosService {
 
   public toggleAnimation(): void {
     this.animationEnabled.next(!this.animationEnabled.getValue());
-  }
-
-  public getLogos(): string[] {
-    return logos;
   }
 }
