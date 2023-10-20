@@ -39,8 +39,6 @@ export class MenuComponent implements AfterViewInit {
       filter((e: Event | RouterEvent): e is RouterEvent => e instanceof RouterEvent)
     ).subscribe((e: RouterEvent) => {
       this.currentRoute = e.url;
-      console.log(this.currentRoute);
-      
     });
 
     this.darkModeEnabled = this.themeService.darkModeEnabled();
