@@ -19,12 +19,12 @@
         </p-dialog>
     </div>
     <div class="xl:w-6 md:w-10 w-11 flex flex-column p-4 pt-0 mt-6">
-        <app-project *ngFor="let project of getProjects()" [project]="project"></app-project>
+        <app-project *ngFor="let project of filteredProjects" [project]="project"></app-project>
     </div>
 </div>
 
 <ng-template #expertIconSelection>
     <div *ngFor="let expertise of getAreaOfExpertise()" class="w-100-div-7">
-        <app-expertise [expertise]="expertise" [clearSelectedEvent]="clearSelectedExpertiseSubject.asObservable()"></app-expertise>
+        <app-expertise [expertise]="expertise" [clearSelectedEvent]="clearSelectedExpertiseSubject.asObservable()" (expertiseClickedEvent)="expertiseClicked($event)"></app-expertise>
     </div>
 </ng-template>

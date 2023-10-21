@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
-import { Expertise } from 'app/services/portfolio/portfolio.service';
+import { Expertise, areaOfExpertise } from 'app/services/portfolio/portfolio.service';
 import { Observable, Subscription } from 'rxjs';
 
 @Component({
@@ -11,7 +11,7 @@ export class ExpertiseComponent implements OnInit, OnDestroy {
   @Input({required: true}) expertise!: Expertise;
   @Input({required: true}) clearSelectedEvent!: Observable<void>;
 
-  @Output() expertiseClickedEvent = new EventEmitter<string>();
+  @Output() expertiseClickedEvent = new EventEmitter<typeof areaOfExpertise[number]>();
 
   selected = false;
   private clearSelectedSubscription!: Subscription;
