@@ -1,4 +1,10 @@
+@use "sass:math";
 .border-5 {
     border-width: 5px !important;
     border-style: solid;
+}
+
+.w-100-div-7 {
+    max-width: math.div(math.percentage(math.div(100, 7)), 100);
+    min-width: 80px;
 }

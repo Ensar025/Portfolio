@@ -1,13 +1,30 @@
-<div class="flex align-items-center flex-column text-center h-screen overflow-hidden z-1 relative">
-    <h1 class="w-auto lg:text-6xl md:text-5xl text-4xl transparent-background p-2 inline-block">My portfolio </h1>
-    <h4 class="xl:w-5 sm:w-8 w-11 md:text-xl text-lg transparent-background p-2">
+<div class="flex align-items-center flex-column z-1 relative">
+    <h1 class="w-auto lg:text-6xl md:text-5xl text-4xl inline-block text-center mb-3">My portfolio </h1>
+    <h4 class="xl:w-5 sm:w-8 w-11 md:text-xl text-lg mb-6 text-center font-normal">
         Explore my portfolio of completed software projects, categorized by the technologies and frameworks they are
         built on. Click on the icons below to filter and discover projects tailored to your interests.
         <br>
         <br>
         Some of the projects are public. To view the source code, click on the icon at the end of the project title.
     </h4>
-    <div class="border-5 border-round-xl xl:w-5 sm:w-8 w-11 h-4rem">
-
+    <div class="hidden md:flex surface-overlay border-round-xl xl:w-6 md:w-10 w-11 grid p-4 justify-content-center mx-6">
+        <ng-container *ngTemplateOutlet="expertIconSelection"></ng-container>
+    </div>
+    <div class="flex md:hidden justify-content-center">
+        <p-button (click)="showDialog()" icon="pi pi-window-maximize p-togglebutton" label="Expand icon selection"></p-button>
+        <p-dialog header="Select icons" [(visible)]="expertIconSelectionDialogVisible" [modal]="true" [style]="{ width: '100vw', height: '60vh'}" [draggable]="false" [resizable]="false">
+            <div class="w-full grid justify-content-center">
+                <ng-container *ngTemplateOutlet="expertIconSelection"></ng-container>
+            </div>
+        </p-dialog>
+    </div>
+    <div class="xl:w-6 md:w-10 w-11 flex flex-column p-4 pt-0 mt-6">
+        <app-project *ngFor="let project of getProjects()" [project]="project"></app-project>
     </div>
 </div>
+
+<ng-template #expertIconSelection>
+    <div *ngFor="let expertise of getAreaOfExpertise()" class="w-100-div-7">
+        <app-expertise [expertise]="expertise" [clearSelectedEvent]="clearSelectedExpertiseSubject.asObservable()"></app-expertise>
+    </div>
+</ng-template>

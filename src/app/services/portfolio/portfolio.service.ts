@@ -114,12 +114,13 @@ export class PortfolioService {
         .replace(' ', '_')
         .replace('#', 'sharp')
         .replace('.', 'dot')
+        .toLowerCase()
     }.svg`
   }));
 
   constructor() { }
 
-  public getPortfolio(): Project[] {
+  public getProjects(): Project[] {
     return this.portfolio;
   }
 
