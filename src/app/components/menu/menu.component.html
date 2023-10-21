@@ -20,7 +20,7 @@
 
     </ng-template>
     <ng-template pTemplate="end">
-        <div class="hidden lg:relative lg:flex">
+        <div class="hidden lg:flex">
             <div *ngIf="currentRoute === '/' || currentRoute === '/home'" class="font-bold mr-3">
                 <p-toggleButton [(ngModel)]="animationEnabled" (onChange)="toggleAnimation()" onIcon="pi pi-power-off"
                     onLabel="Turn off background animation" offIcon="pi pi-play"

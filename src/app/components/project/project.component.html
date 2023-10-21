@@ -23,7 +23,6 @@
         </div>
     </div>
     <div class="col-12 flex flex-column md:hidden">
-        <!-- <p class="mb-2 mt-0 font-bold sm:text-sm text-xs">Made with:</p> -->
         <div class="grid -mt-4">
             <img class="sm:col-2 col-1 made-with-icon" *ngFor="let technology of getExpertiseIconsFromTechnologies(project.madeWith)" [src]="technology.src" [alt]="technology.name">
         </div>
