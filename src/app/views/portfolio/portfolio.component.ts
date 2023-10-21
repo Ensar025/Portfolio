@@ -30,6 +30,8 @@ export class PortfolioComponent {
 
   emitClearSelectedExpertise(): void {
     this.clearSelectedExpertiseSubject.next();
+    this.expertiseToFilterProjects.clear();
+    this.updateFilteredProjects();
   }
 
   expertiseClicked(clickedExpertise: typeof areaOfExpertise[number]): void {
