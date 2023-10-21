@@ -57,7 +57,7 @@ export class PortfolioService {
     {
       title: 'Dependency Health Monitor at iO',
       description: 'During my graduation assignment, I created an application that is capable of determining the financial health of Open-Source projects with the goal of improving Open-Source sustainability.',
-      madeWith: ['Vue', 'Node JS', 'GraphQL', 'TypeScript', 'Azure', 'Git', 'Sass'],
+      madeWith: ['Vue', 'Node JS', 'GraphQL', 'TypeScript', 'Azure', 'Git', 'Sass', 'GitHub Actions'],
       publicRepo: 'https://github.com/isaaceindhoven/dependency-health-monitor'
     },
     {
