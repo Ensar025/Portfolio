@@ -12,11 +12,11 @@ export class PortfolioComponent {
   clearSelectedExpertiseSubject: Subject<void> = new Subject<void>();
   expertiseToFilterProjects = new Set<typeof areaOfExpertise[number]>();
 
-  readonly projects!: Set<Project>;
-  filteredProjects!: Set<Project>;
+  readonly projects!: Project[];
+  filteredProjects!: Project[];
   
   constructor(private portfolioService: PortfolioService) {
-    this.projects = new Set<Project>(this.getProjects());
+    this.projects = this.getProjects();
     this.filteredProjects = structuredClone(this.projects);
   }
 
@@ -47,16 +47,15 @@ export class PortfolioComponent {
   }
 
   private updateFilteredProjects(): void {
-    this.filteredProjects = new Set<Project>();
-
     if (this.expertiseToFilterProjects.size === 0) {
       this.filteredProjects = this.projects;
       return;
     }
 
+    this.filteredProjects = [];
     for (let project of this.projects) {
-      if (project.madeWith.some(expertise => this.expertiseToFilterProjects.has(expertise))) {
-        this.filteredProjects.add(project);
+      if ([...this.expertiseToFilterProjects].every(filter => project.madeWith.includes(filter))) {
+        this.filteredProjects.push(project);
       }
     }
   }
