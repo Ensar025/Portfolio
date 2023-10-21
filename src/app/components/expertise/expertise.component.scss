@@ -1,0 +1,20 @@
+.expertise-icon-container {
+    transition: transform .2s;
+    border-radius: var(--border-radius);
+    border: 2px solid transparent !important;
+    user-select: none;
+
+    &:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+        background-color: var(--surface-card);
+    }
+
+    &.border-inline-1 {
+        border-color: var(--surface-border) !important;
+    }
+
+    .expertise-icon {
+        width: auto !important;
+    }
+}

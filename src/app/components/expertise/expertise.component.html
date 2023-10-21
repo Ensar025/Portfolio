@@ -1,0 +1,6 @@
+<div (click)="expertiseClicked()" class="flex flex-column align-items-center expertise-icon-container p-1 m-1" [class]="selected ? 'surface-card border-inline-1' : '' ">
+    <div class="mb-4 flex justify-content-center">
+        <img class="expertise-icon h-3rem" [src]="expertise.src" [alt]="expertise.name">
+    </div>
+    <span class="md:text-sm text-xs">{{expertise.name}}</span>
+</div>    
