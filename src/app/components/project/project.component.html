@@ -1,0 +1,31 @@
+<div class="grid mb-4">
+    <div class="col">
+        <a *ngIf="project.publicRepo; else noPublicUrl" [href]="project.publicRepo" class="text-color no-underline hover:underline font-bold" target="_blank">
+            <span class="lg:text-3xl text-2xl">
+                {{project.title}}
+            </span>
+            <i class="pi pi-external-link"></i>
+        </a>
+        <ng-template #noPublicUrl >
+            <span class="lg:text-3xl text-2xl font-bold">
+                {{project.title}}
+            </span>
+        </ng-template>
+        <br>
+        <p class="lg:text-lg text-sm mt-1">
+            {{project.description}}
+        </p>
+    </div>
+    <div class="col-4 md:flex md:flex-column hidden">
+        <p class="mb-2 mt-0 font-bold sm:text-sm text-xs">Made with:</p>
+        <div class="flex flex-wrap test">
+            <img class="made-with-icon p-2" *ngFor="let technology of getExpertiseIconsFromTechnologies(project.madeWith)" [src]="technology.src" [alt]="technology.name">
+        </div>
+    </div>
+    <div class="col-12 flex flex-column md:hidden">
+        <!-- <p class="mb-2 mt-0 font-bold sm:text-sm text-xs">Made with:</p> -->
+        <div class="grid -mt-4">
+            <img class="sm:col-2 col-1 made-with-icon" *ngFor="let technology of getExpertiseIconsFromTechnologies(project.madeWith)" [src]="technology.src" [alt]="technology.name">
+        </div>
+    </div>
+</div>
