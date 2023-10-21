@@ -86,7 +86,7 @@ export class PortfolioService {
     {
       title: 'Akzonobel Webshop',
       description: 'Together with my colleagues, I created a webshop for AkzoNobel which they use to sell paint. I mainly worked on the frontend of this project.',
-      madeWith: ['Gatsby', 'GraphQL', 'Git']
+      madeWith: ['Gatsby', 'GraphQL', 'Git', 'React']
     },
     {
       title: 'Intranet for the APS Group',
