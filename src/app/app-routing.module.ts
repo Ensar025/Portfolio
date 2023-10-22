@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
 import { PortfolioComponent } from './views/portfolio/portfolio.component';
 import { AboutComponent } from './views/about/about.component';
+import { PageDoesNotExistComponent } from './views/page-does-not-exist/page-does-not-exist.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,9 @@ const routes: Routes = [
   },
   {
     path: 'about', component: AboutComponent
+  },
+  {
+    path: '**', component: PageDoesNotExistComponent
   }
 ];
 

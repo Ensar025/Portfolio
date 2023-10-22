@@ -21,6 +21,7 @@ import { ExpertiseComponent } from './components/expertise/expertise.component';
 import { ProjectComponent } from './components/project/project.component';
 import { AboutComponent } from './views/about/about.component';
 import { QualificationComponent } from './components/qualification/qualification.component';
+import { PageDoesNotExistComponent } from './views/page-does-not-exist/page-does-not-exist.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { QualificationComponent } from './components/qualification/qualification
     ExpertiseComponent,
     ProjectComponent,
     AboutComponent,
-    QualificationComponent
+    QualificationComponent,
+    PageDoesNotExistComponent
   ],
   imports: [
     ToggleButtonModule,
