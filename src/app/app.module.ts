@@ -19,6 +19,8 @@ import { MenuComponent } from './components/menu/menu.component';
 import { PortfolioComponent } from './views/portfolio/portfolio.component';
 import { ExpertiseComponent } from './components/expertise/expertise.component';
 import { ProjectComponent } from './components/project/project.component';
+import { AboutComponent } from './views/about/about.component';
+import { QualificationComponent } from './components/qualification/qualification.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ProjectComponent } from './components/project/project.component';
     MenuComponent,
     PortfolioComponent,
     ExpertiseComponent,
-    ProjectComponent
+    ProjectComponent,
+    AboutComponent,
+    QualificationComponent
   ],
   imports: [
     ToggleButtonModule,

@@ -31,6 +31,11 @@ export class MenuComponent implements AfterViewInit {
       label: 'Projects',
       icon: 'pi pi-folder',
       routerLink: '/portfolio'
+    },
+    {
+      label: 'About',
+      icon: 'pi pi-user',
+      routerLink: '/about'
     }
   ]
 

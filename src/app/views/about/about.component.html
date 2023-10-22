@@ -1,0 +1,41 @@
+<div class="flex align-items-center flex-column z-1 relative">
+    <h1 class="w-auto inline-block text-center mb-4 text-4xl md:text-5xl lg:text-6xl">Get to know me</h1>
+    <div class="grid w-full justify-content-center mb-4 lg:w-10">
+        <div class="flex justify-content-center mb-2 sm:mb-0 sm:mr-2 md:mr-4 xl:col-auto xl:justify-content-end">
+            <img class="border-round-xl h-10rem sm:h-15rem md:h-17rem"
+                src="https://media.licdn.com/dms/image/C4D03AQFEuugmCeWiLw/profile-displayphoto-shrink_400_400/0/1640274592797?e=2147483647&v=beta&t=PedPJcFu9_0qXH1WuwAuw9J0rCuChh7bPUeEGTiY81I">
+        </div>
+        <div class="col-12 sm:col-6 md:col-5 lg:col-4 xl:col-3">
+            <span class="text-lg px-6 sm:px-0 inline-block">
+                Hello! Welcome to my about page. My name is Muhammed Ensar Ishakoglu and I am 23 years old. I was born
+                and raised in the Netherlands and have a Turkish ethnicity. In my free time, I like to work out in the
+                gym, hang out with friends and play some games. If you are interested, my qualifications can be found below.
+            </span>
+        </div>
+    </div>
+    <div class="grid xl:8 lg:w-10 md:w-11 w-full justify-content-center sm:px-3 px-6 lg:px-0">
+        <div class="md:col-3 sm:col-4 col-12">
+            <span class="text-3xl mb-2 inline-block font-semibold">Education</span>
+            <app-qualification *ngFor="let qualification of educationalExperiences"
+                [qualification]="qualification"></app-qualification>
+        </div>
+        <div class="md:col-3 sm:col-4 col-12">
+            <span class="text-3xl mb-2 inline-block font-semibold">Work experience</span>
+            <app-qualification *ngFor="let qualification of workExperiences"
+                [qualification]="qualification"></app-qualification>
+        </div>
+        <div class="md:col-3 sm:col-4 col-12">
+            <span class="text-3xl mb-2 inline-block font-semibold">Certificates</span>
+            <app-qualification *ngFor="let qualification of certificates"
+                [qualification]="qualification"></app-qualification>
+        </div>
+        <div class="md:col-3 sm:col-4 col-12">
+            <span class="text-3xl mb-2 inline-block font-semibold">Proficient languages</span>
+            <div class="flex flex-column">
+                <span class="text-lg mb-1">Dutch</span>
+                <span class="text-lg mb-1">Turkish</span>
+                <span class="text-lg mb-1">English</span>
+            </div>
+        </div>
+    </div>
+</div>
