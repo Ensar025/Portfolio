@@ -14,7 +14,7 @@
         <ng-container *ngTemplateOutlet="expertIconSelection"></ng-container>
     </div>
     <div class="flex md:hidden justify-content-center">
-        <p-button (click)="showDialog()" icon="pi pi-window-maximize p-togglebutton" label="Expand icon selection"></p-button>
+        <p-button (click)="showDialog()" styleClass="p-togglebutton" icon="pi pi-window-maximize p-togglebutton" label="Expand icon selection"></p-button>
         <p-dialog header="Select icons" [(visible)]="expertIconSelectionDialogVisible" [modal]="true" [style]="{ width: '100vw', height: '60vh'}" [draggable]="false" [resizable]="false">
             <div class="w-full grid justify-content-center">
                 <ng-container *ngTemplateOutlet="expertIconSelection"></ng-container>
