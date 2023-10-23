@@ -6,9 +6,8 @@ import { Inject, Injectable } from '@angular/core';
 })
 export class ThemeService {
   private readonly THEME_ELEMENT_ID = "app-theme";
-  private readonly THEME_PREFIX = "src/themes/";
-  private readonly DARK_THEME = this.THEME_PREFIX + "md-dark-indigo";
-  private readonly LIGHT_THEME = this.THEME_PREFIX + "md-light-indigo";
+  private readonly DARK_THEME = "md-dark-indigo";
+  private readonly LIGHT_THEME = "md-light-indigo";
   private readonly LOGO_ID = "logo";
   private readonly LOGO_PREFIX = "assets/"
   private readonly LOGO_LIGHT = "logo-light.svg";
@@ -47,7 +46,7 @@ export class ThemeService {
 
     if (themeLink) {
       let newTheme = this.isDarkMode ? this.DARK_THEME : this.LIGHT_THEME;
-      newTheme += ".scss";
+      newTheme += ".css";
 
       themeLink.href = newTheme;
     } else {

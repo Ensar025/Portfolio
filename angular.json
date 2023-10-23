@@ -31,13 +31,18 @@
             "styles": [
               "src/styles.scss",
               {
-                "input": "src/assets/themes/md-light-indigo.scss",
+                "input": "src/themes/md-light-indigo.scss",
                 "bundleName": "md-light-indigo",
                 "inject": false
               },
               {
-                "input": "src/assets/themes/md-dark-indigo.scss",
+                "input": "src/themes/md-dark-indigo.scss",
                 "bundleName": "md-dark-indigo",
+                "inject": false
+              },
+              {
+                "input": "src/themes/menubar.scss",
+                "bundleName": "menubar",
                 "inject": false
               }
             ],
