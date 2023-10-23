@@ -39,6 +39,11 @@
                 "input": "src/themes/md-dark-indigo.scss",
                 "bundleName": "md-dark-indigo",
                 "inject": false
+              },
+              {
+                "input": "src/themes/menubar.scss",
+                "bundleName": "menubar",
+                "inject": false
               }
             ],
             "scripts": []
