@@ -9,6 +9,6 @@ body {
 }
 
 .transparent-background {
-  background-color: color-mix(in srgb, var(--surface-ground) 50%, transparent);
+  background-color: rgba($color: var(--surface-ground), $alpha: 0.5);
   border-radius: var(--border-radius);
 }
