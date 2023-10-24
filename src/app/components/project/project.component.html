@@ -19,12 +19,12 @@
     <div class="col-4 md:flex md:flex-column hidden">
         <p class="mb-2 mt-0 font-bold sm:text-sm text-xs">Made with:</p>
         <div class="flex flex-wrap test">
-            <img class="made-with-icon p-2" *ngFor="let technology of getExpertiseIconsFromTechnologies(project.madeWith)" [src]="technology.src" [alt]="technology.name">
+            <img class="made-with-icon p-2" *ngFor="let technology of getExpertiseIconsFromTechnologies(project.madeWith)" [src]="technology.src" [alt]="technology.name" [title]="technology.name">
         </div>
     </div>
     <div class="col-12 flex flex-column md:hidden">
         <div class="grid -mt-4">
-            <img class="sm:col-2 col-1 made-with-icon" *ngFor="let technology of getExpertiseIconsFromTechnologies(project.madeWith)" [src]="technology.src" [alt]="technology.name">
+            <img class="sm:col-2 col-1 made-with-icon" *ngFor="let technology of getExpertiseIconsFromTechnologies(project.madeWith)" [src]="technology.src" [alt]="technology.name" [title]="technology.name">
         </div>
     </div>
 </div>
