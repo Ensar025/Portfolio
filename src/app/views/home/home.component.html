@@ -1,9 +1,7 @@
-<div class="overflow-hidden h-screen w-screen absolute top-0">
-    <app-floating-expertise-logos></app-floating-expertise-logos>
-</div>
+<app-floating-expertise-logos></app-floating-expertise-logos>
 
 <div
-    class="flex align-items-center justify-content-center flex-column text-center h-screen overflow-hidden z-1 fixed top-0">
+    class="flex align-items-center justify-content-center flex-column text-center h-full z-1 relative">
     <h1 class="w-auto lg:text-6xl md:text-5xl text-4xl transparent-background p-2 inline-block mb-3">Hey! 👋, <br> I'm
         Muhammed Ensar </h1>
     <h4 class="xl:w-5 sm:w-8 w-11 md:text-xl text-lg transparent-background p-2">
@@ -13,19 +11,18 @@
         AI.
         <br>
         <br>
-        If you have background animations toggled on at the top of your screen, you will get a glimpse of the frameworks
-        and technologies I have experience with floating by. If you want to explore my whole portfolio, click the button
-        below.
+        In the background, you will get a glimpse of the frameworks and technologies I have experience with floating by.
+        If these floating icons bother you, you can turn them off at the top of your screen. If you want to explore my
+        whole portfolio, click the button below.
     </h4>
-    <div class="flex w-auto flex-row justify-content-center transparent-background p-2 inline-block">
-        <a *ngFor="let social of socials; index as i" class="font-bold text-xl no-underline text-color"
-            [ngClass]="i === socials.length-1 ? '' : 'mr-3'" [href]="social.url" target="_blank">
+    <div class="flex w-auto flex-row justify-content-center transparent-background p-2 inline-block gap-3">
+        <a *ngFor="let social of socials" class="font-bold text-xl no-underline text-color" [href]="social.url" target="_blank">
             <i [class]="social.icon" style="font-size: 2.5rem;"></i>
         </a>
     </div>
-    <div class="text-center mt-3 md:text-xl text-lg font-bold">
-        <a class="text-color" [routerLink]="['/portfolio']">
-            Explore my portfolio!
+    <div class="text-center mt-3 mb-6 md:text-xl text-lg font-bold">
+        <a [routerLink]="['/portfolio']">
+            <p-button styleClass="p-togglebutton p-button p-highlight" label="Explore my portfolio!"></p-button>
         </a>
     </div>
 </div>

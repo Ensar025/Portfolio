@@ -1,2 +1,7 @@
 @import "primeng/resources/themes/md-light-indigo/theme.css";
 @import "./menubar.scss";
+
+.transparent-background {
+    background-color: rgba(250, 250, 250, 0.5);
+    border-radius: var(--border-radius);
+}
