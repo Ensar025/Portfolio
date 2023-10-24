@@ -22,6 +22,7 @@ import { ProjectComponent } from './components/project/project.component';
 import { AboutComponent } from './views/about/about.component';
 import { QualificationComponent } from './components/qualification/qualification.component';
 import { PageDoesNotExistComponent } from './views/page-does-not-exist/page-does-not-exist.component';
+import { LiveAgeComponent } from './components/live-age/live-age.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { PageDoesNotExistComponent } from './views/page-does-not-exist/page-does
     ProjectComponent,
     AboutComponent,
     QualificationComponent,
-    PageDoesNotExistComponent
+    PageDoesNotExistComponent,
+    LiveAgeComponent
   ],
   imports: [
     ToggleButtonModule,
