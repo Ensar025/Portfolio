@@ -22,7 +22,10 @@ export const areaOfExpertise = [
   "TypeORM",
   "TypeScript",
   "Ubuntu",
-  "Vue"
+  "Vue",
+  'Strapi',
+  'Cloudflare',
+  "Next JS"
 ] as const;
 
 export interface Expertise {
@@ -43,6 +46,26 @@ export interface Project {
 })
 export class PortfolioService {
   private portfolio: Project[] = [
+    {
+      title: 'Client Portal',
+      description: 'An app that lets users manage tools, share forms, and catch up on news. Backend made with Strapi and frontend with React using GraphQL and Cloudflare.',
+      madeWith: ['React', 'Strapi', 'Cloudflare', 'GraphQL', 'Node JS', 'Next JS']
+    },
+    {
+      title: 'Social Networker Webshop',
+      description: 'A webshop built with React and GraphQL for fast and smooth product browsing and purchasing.',
+      madeWith: ['React', 'GraphQL', 'Next JS', 'Cloudflare']
+    },
+    {
+      title: 'Allocation Manager',
+      description: 'An app that helps manage marketing campaigns and product allocations between stores.',
+      madeWith: ['React', 'Java', 'GraphQL', 'Cloudflare', 'GraphQL']
+    },
+    {
+      title: 'APS Connectors',
+      description: 'Connectors that enable APS microservices to communicate and map data efficiently.',
+      madeWith: ['Java']
+    },
     {
       title: 'Meishako Portfolio',
       description: 'The website you are viewing now!',
